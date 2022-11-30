@@ -204,11 +204,11 @@ test_pipeline:
     pad_empty_sweeps: true
     remove_close: true
     load_augmented: ${load_augmented}
-  -
-    type: LoadAnnotations3D
-    with_bbox_3d: true
-    with_label_3d: true
-    with_attr_label: False
+#   -
+#     type: LoadAnnotations3D
+#     with_bbox_3d: true
+#     with_label_3d: true
+#     with_attr_label: False
   -
     type: ImageAug3D
     final_dim: ${image_size}
@@ -244,18 +244,18 @@ test_pipeline:
     keys:
       - img
       - points
-      - gt_bboxes_3d
-      - gt_labels_3d
-      - gt_masks_bev
-    meta_keys:
-      - camera_intrinsics
-      - camera2ego
-      - lidar2ego
-      - lidar2camera
-      - camera2lidar
-      - lidar2image
-      - img_aug_matrix
-      - lidar_aug_matrix
+#       - gt_bboxes_3d
+#       - gt_labels_3d
+#       - gt_masks_bev
+#     meta_keys:
+#       - camera_intrinsics
+#       - camera2ego
+#       - lidar2ego
+#       - lidar2camera
+#       - camera2lidar
+#       - lidar2image
+#       - img_aug_matrix
+#       - lidar_aug_matrix
 
 data:
   samples_per_gpu: 4
