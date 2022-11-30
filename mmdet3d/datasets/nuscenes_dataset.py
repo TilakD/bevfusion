@@ -274,7 +274,7 @@ class NuScenesDataset(Custom3DDataset):
                 camera2lidar[:3, 3] = camera_info["sensor2lidar_translation"]
                 data["camera2lidar"].append(camera2lidar)
 
-        annos = self.get_ann_info(index)
+        annos = None #self.get_ann_info(index)
         data["ann_info"] = annos
         return data
 
